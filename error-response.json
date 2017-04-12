@@ -1,0 +1,15 @@
+{
+  "data": {
+    "user": null
+  },
+  "errors": [
+    {
+      "message": "An unknown error has occurred",
+      "name": "UnknownError",
+      "time_thrown":"2017-04-12T00:40:50.954Z",
+      "data": {
+        "name": "DatabaseConnectionError"
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  # Get current User (logged in)
+  getMyUser: user
+}
+
+type Mutation {
+  # Register a user (not logged in)
+  register
+    name: String
+    email: String
+    password: String
+  ): User
+  # Update a User's profile (logged in)
+  updateProfile(
+    name: String
+    email: String
+  ): User
+  # Ban a User (logged in as an admin)
+  banUser(
+    id: ID!
+  ): User
+}
+
+# Models a User
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
