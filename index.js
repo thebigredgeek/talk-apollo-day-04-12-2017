@@ -13,8 +13,9 @@ import schema from './schema';
 const app = express();
 
 const auth = async (req, res, next) => {
+  const User = new UserModel(null);
   if (req.cookies.token) {  
-    req.user = await models.User.authenticate(req.cookies.token);
+    req.user = await User.authenticate(req.cookies.token);
   } else {
     req.user = null;
   }
